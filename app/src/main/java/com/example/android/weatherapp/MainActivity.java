@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         myCity = (TextView) findViewById(R.id.city);
         myState = (Spinner) findViewById(R.id.state);*/
         if (myAddress.getText().toString().equals("")) {
-            myValidate.setText("Please enter street address");
+            myValidate.setText("Please enter a street address");
             return false;
         }
         if (myCity.getText().toString().equals("")) {
