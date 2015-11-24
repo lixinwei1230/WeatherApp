@@ -160,91 +160,6 @@ public class MainActivity extends AppCompatActivity {
     public class FetchWeatherTask extends AsyncTask<Void, Void, String> {
         private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
 
-        /*private String getReadableDateString(long time) {
-            SimpleDateFormat shortenedDateFormat = new SimpleDateFormat("EEE MMM dd");
-            return shortenedDateFormat.format(time);
-        }
-
-        private String formatHighLows(double high, double low, String unitType) {
-
-            if (unitType.equals(getString(R.string.pref_units_imperial))) {
-                high = (high * 1.8) + 32;
-                low = (low * 1.8) + 32;
-            } else if (!unitType.equals(getString(R.string.pref_units_metric))) {
-                Log.d(LOG_TAG, "Unit type not found: " + unitType);
-            }
-
-            long roundedHigh = Math.round(high);
-            long roundedLow = Math.round(low);
-
-            String highLowStr = roundedHigh + "/" + roundedLow;
-            return highLowStr;
-        }
-
-        private String[] getWeatherDataFromJson(String forecastJsonStr, int numDays) throws JSONException {
-            final String OWN_LIST = "list";
-            final String OWN_WEATHER = "weather";
-            final String OWN_TEMPERATURE = "temp";
-            final String OWN_MAX = "max";
-            final String OWN_MIN = "min";
-            final String OWN_DESCRIPTION = "main";
-
-            JSONObject forecastJson = new JSONObject(forecastJsonStr);
-            JSONArray weatherArray = forecastJson.getJSONArray(OWN_LIST);
-
-            android.text.format.Time dayTime = new android.text.format.Time();
-            dayTime.setToNow();
-
-            int julianStartDay = android.text.format.Time.getJulianDay(System.currentTimeMillis(), dayTime.gmtoff);
-
-            dayTime = new android.text.format.Time();
-
-            String[] resultStrs = new String[numDays];
-
-
-            // Data is fetched in Celsius by default.
-            // If user prefers to see in Fahrenheit, convert the values here.
-            // We do this rather than fetching in Fahrenheit so that the user can
-            // change this option without us having to re-fetch the data once
-            // we start storing the values in a database.
-            SharedPreferences sharedPrefs =
-                    PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String unitType = sharedPrefs.getString(
-                    getString(R.string.pref_units_key),
-                    getString(R.string.pref_units_metric));
-
-            for (int i = 0; i < weatherArray.length(); i++) {
-                String day;
-                String description;
-                String highAndLow;
-
-                JSONObject dayForecast = weatherArray.getJSONObject(i);
-
-                long dateTime;
-
-                dateTime = dayTime.setJulianDay(julianStartDay + i);
-                day = getReadableDateString(dateTime);
-
-                JSONObject weatherObject = dayForecast.getJSONArray(OWN_WEATHER).getJSONObject(0);
-                description = weatherObject.getString(OWN_DESCRIPTION);
-
-                JSONObject temperatureObject = dayForecast.getJSONObject(OWN_TEMPERATURE);
-                double high = temperatureObject.getDouble(OWN_MAX);
-                double low = temperatureObject.getDouble(OWN_MIN);
-
-                highAndLow = formatHighLows(high, low, unitType);
-                resultStrs[i] = day + " - " + description + " - " + highAndLow;
-
-            }
-
-            for (String r : resultStrs) {
-                //Log.v(LOG_TAG, "Forecast entry: " + r );
-            }
-
-            return resultStrs;
-
-        }*/
-
         @Override
         protected String doInBackground(Void... params) {
             // These two need to be declared outside the try/catch
@@ -317,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 return forecastJsonStr;
 
             } catch (IOException e) {
-                Log.e(LOG_TAG, "Error ", e);
+                Log.e(LOG_TAG, "Error!!!", e);
                 // If the code didn't successfully get the weather data, there's no point in attemping
                 // to parse it.
                 return null;
@@ -333,13 +248,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
-            /*try {
-                return getWeatherDataFromJson(forecastJsonStr, numDays);
-            } catch (JSONException e) {
-                Log.e(LOG_TAG, e.getMessage(), e);
-                e.printStackTrace();
-            }*/
         }
 
         @Override
@@ -347,9 +255,9 @@ public class MainActivity extends AppCompatActivity {
             if (result != null) {
                 Intent myIntent = new Intent(context, ResultActivity.class);
                 myIntent.putExtra("myJson", result);
-                //myIntent.putExtra("city", myCity.getText().toString());
-                //myIntent.putExtra("state", String.valueOf(myState.getSelectedItem()));
-                //myIntent.putExtra("temp", tempUnit);
+                myIntent.putExtra("city", myCity.getText().toString());
+                myIntent.putExtra("state", String.valueOf(myState.getSelectedItem()));
+                myIntent.putExtra("tempUnit", tempUnit);
                 startActivity(myIntent);
             }
         }

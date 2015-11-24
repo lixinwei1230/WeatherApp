@@ -24,9 +24,15 @@
             android:label="ResultActivity"
             android:parentActivityName=".MainActivity" >
         </activity>
-        <activity android:name=".AboutActivity"
+        <activity
+            android:name=".AboutActivity"
             android:label="AboutActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="DetailsActivity"
+            android:parentActivityName=".ResultActivity">
         </activity>
     </application>
 
