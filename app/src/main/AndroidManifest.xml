@@ -21,18 +21,15 @@
         </activity>
         <activity
             android:name=".ResultActivity"
-            android:label="ResultActivity"
-            android:parentActivityName=".MainActivity" >
+            android:label="ResultActivity">
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="AboutActivity"
-            android:parentActivityName=".MainActivity" >
+            android:label="AboutActivity">
         </activity>
         <activity
             android:name=".DetailsActivity"
-            android:label="DetailsActivity"
-            android:parentActivityName=".ResultActivity">
+            android:label="DetailsActivity">
         </activity>
     </application>
 

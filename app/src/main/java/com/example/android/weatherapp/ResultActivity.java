@@ -17,12 +17,8 @@ import org.json.JSONObject;
 public class ResultActivity extends AppCompatActivity {
 
     private TextView testText;
-    private Context context = this.getApplicationContext();
-    private String myCity;
-    private String myState;
-    private String myTempUnit;
-    private String myJson;
-
+    private Bundle extra;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +26,14 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         // receive the arguments from the previous Activity
-        Bundle extra = getIntent().getExtras();
+        extra = getIntent().getExtras();
         if (extra == null) {
             return;
         }
         // assign the values to string-arguments
-        myJson = extra.getString("myJson");
-        myCity = extra.getString("city");
-        myState = extra.getString("state");
-        myTempUnit = extra.getString("tempUnit");
+        String myJson = extra.getString("myJson");
         getRightnowInfoFromJson(myJson);
-        clickFacebookButton();
-        //addListenerOnButton();
+        addListenerOnButton();
     }
 
     private void getRightnowInfoFromJson(String forecastJsonStr) {
@@ -140,7 +132,7 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    private void clickFacebookButton() {
+    private void addListenerOnButton() {
         ImageView img = (ImageView)findViewById(R.id.facebook);
         img.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -151,24 +143,24 @@ public class ResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
-    private void addListenerOnButton() {
-
+        context = this.getApplicationContext();
         Button myDetailBtn = (Button) findViewById(R.id.detail);
         myDetailBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(context, DetailsActivity.class);
-                myIntent.putExtra("myJson", myJson);
-                myIntent.putExtra("city", myCity);
-                myIntent.putExtra("state", myState);
-                myIntent.putExtra("tempUnit", myTempUnit);
+                myIntent.putExtra("myJson", extra.getString("myJson"));
+                myIntent.putExtra("city", extra.getString("city"));
+                myIntent.putExtra("state", extra.getString("state"));
+                myIntent.putExtra("tempUnit", extra.getString("tempUnit"));
                 startActivity(myIntent);
             }
 
         });
     }
-    
+
+
+
 }
