@@ -10,6 +10,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.share.Sharer;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,11 +28,34 @@ public class ResultActivity extends AppCompatActivity {
     private TextView testText;
     private Bundle extra;
     private Context context;
+    private String myCity;
+    private String myState;
+    private String myImgUrl;
+    private String myDes;
+
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
+
+
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+        // this part is optional
+        /*shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
+
+        });*/
+
 
         // receive the arguments from the previous Activity
         extra = getIntent().getExtras();
@@ -32,22 +64,29 @@ public class ResultActivity extends AppCompatActivity {
         }
         // assign the values to string-arguments
         String myJson = extra.getString("myJson");
+        myCity = extra.getString("city");
+        myState = extra.getString("state");
         getRightnowInfoFromJson(myJson);
         addListenerOnButton();
     }
 
+
     private void getRightnowInfoFromJson(String forecastJsonStr) {
         try {
+            myImgUrl = "http://cs-server.usc.edu:45678/hw/hw8/images/";
+
             JSONObject obj = new JSONObject(forecastJsonStr);
             JSONObject rightNow = obj.getJSONObject("rightNow");
             testText = (TextView) findViewById(R.id.getInfo);
             //set the description picture
+            myDes = rightNow.get("weatherDes").toString();
             int pic_index = rightNow.get("pic_alt").toString().indexOf(".");
             String pic = rightNow.get("pic_alt").toString().substring(0, pic_index);
             ImageView myImg = (ImageView) findViewById(R.id.picDesNow);
             switch(pic) {
                 case "clear":
                     myImg.setImageResource(R.drawable.clear);
+                    myImgUrl += pic + ".png";
                     break;
                 case "clear_night":
                     myImg.setImageResource(R.drawable.clear_night);
@@ -136,11 +175,43 @@ public class ResultActivity extends AppCompatActivity {
         ImageView img = (ImageView)findViewById(R.id.facebook);
         img.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent();
+                /*Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.facebook.com"));
-                startActivity(intent);
+                startActivity(intent);*/
+                Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
+                String myTitle = "Current Weather in " + myCity + ", " + myState;
+                ShareLinkContent content = new ShareLinkContent.Builder()
+                        .setContentUrl(Uri.parse("http://forecast.io/"))
+                        .setContentTitle(myTitle)
+                        .setImageUrl(Uri.parse(myImgUrl))
+                        .setContentDescription(myDes)
+                        .build();
+                shareDialog.show(content);
+
+                shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
+
+
+                    @Override
+                    public void onSuccess(Sharer.Result result) {
+                        if (result.getPostId() == null) {
+                            Toast.makeText(getApplicationContext(), "Posted Cancelled", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Facebook Post Successful", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    @Override
+                    public void onCancel() {
+                        Toast.makeText(getApplicationContext(), "Posted Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(FacebookException e) {
+                        Log.v("FACEBOOK_TEST", "share api error " + e);
+                    }
+
+                });
             }
         });
 
@@ -160,7 +231,6 @@ public class ResultActivity extends AppCompatActivity {
 
         });
     }
-
 
 
 }

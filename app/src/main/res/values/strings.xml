@@ -4,6 +4,8 @@
 
     <string name="statePrompt">Select</string>
 
+    <string name="app_id">555492611282408</string>
+
     <string-array name="stateArrays">
         <item>Select</item>
         <item>AL</item>

@@ -16,6 +16,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -45,12 +48,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
         setContentView(R.layout.activity_main);
         linkToForecastIO();
         addListenerOnButton();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        AppEventsLogger.activateApp(this);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        AppEventsLogger.deactivateApp(this);
     }
 
     public void linkToForecastIO() {

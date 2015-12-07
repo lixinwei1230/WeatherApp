@@ -16,7 +16,6 @@
             android:id="@+id/showInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             android:layout_marginTop="10dp"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -42,103 +41,7 @@
             android:layout_marginTop="18dp"
             android:id="@+id/next7DaysBtn" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/next24HoursBtn"
-            android:id="@+id/next24Hours"
-            android:visibility="visible">
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/myTable">
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#00ffff"
-                    android:paddingBottom="12dp"
-                    android:paddingTop="2dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="6dp">
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="Time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="Summary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                    <TextView
-                        android:layout_weight="1"
-                        android:text=""
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"
-                        android:id="@+id/hourlyUnit"/>
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#b3b3b3"
-                    android:paddingTop="3dp"
-                    android:layout_marginBottom="6dp">
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="01:00AM"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                    <ImageView
-                        android:layout_weight="1"
-                        android:src="@drawable/clear"
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:gravity="center_horizontal" />
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="56"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                </TableRow>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
-                    android:layout_marginBottom="6dp">
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="02:00AM"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                    <ImageView
-                        android:layout_weight="1"
-                        android:src="@drawable/clear_night"
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:gravity="center_horizontal" />
-                    <TextView
-                        android:layout_weight="1"
-                        android:text="55"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="22sp"/>
-                </TableRow>
-            </TableLayout>
-        </RelativeLayout>
+        <include layout="@layout/subdetail"/>
 
 
 
@@ -170,7 +73,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day1"/>
@@ -182,7 +84,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day1"
@@ -204,7 +105,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day2"/>
@@ -216,7 +116,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day2"
@@ -238,7 +137,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day3"/>
@@ -250,7 +148,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day3"
@@ -272,7 +169,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day4"/>
@@ -284,7 +180,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day4"
@@ -305,7 +200,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day5"/>
@@ -317,7 +211,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day5"
@@ -338,7 +231,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day6"/>
@@ -350,7 +242,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day6"
@@ -371,7 +262,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:textSize="24sp"
                             android:textStyle="bold"
                             android:id="@+id/day7" />
@@ -383,7 +273,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
                             android:layout_marginTop="20dp"
                             android:textSize="24sp"
                             android:layout_below="@+id/day7"
