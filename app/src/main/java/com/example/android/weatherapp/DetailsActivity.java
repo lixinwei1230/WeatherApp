@@ -152,10 +152,11 @@ public class DetailsActivity extends AppCompatActivity {
 
             TextView myTemp1 = (TextView) findViewById(R.id.myTemp1);
             String myTemp1Str = hour1.get("hourlyTemp").toString();
-            int index = myTemp1Str.indexOf(".");
-
-
             myTemp1.setText(myTemp1Str);
+            hour1 = null;
+            myTemp1 = null;
+            myTime1 = null;
+            myImg1 = null;
 
             JSONObject hour2 = next24Hours.getJSONObject(1);
             int hour2PicEnd = hour2.get("hourlySummary").toString().indexOf(".");
@@ -211,6 +212,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp2 = (TextView) findViewById(R.id.myTemp2);
             String myTemp2Str = hour2.get("hourlyTemp").toString();
             myTemp2.setText(myTemp2Str);
+            hour2 = null;
+            myTemp2 = null;
+            myTime2 = null;
+            myImg2 = null;
 
             JSONObject hour3 = next24Hours.getJSONObject(2);
             int hour3PicEnd = hour3.get("hourlySummary").toString().indexOf(".");
@@ -266,6 +271,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp3 = (TextView) findViewById(R.id.myTemp3);
             String myTemp3Str = hour3.get("hourlyTemp").toString();
             myTemp3.setText(myTemp3Str);
+            hour3 = null;
+            myTemp3 = null;
+            myTime3 = null;
+            myImg3 = null;
 
             JSONObject hour4 = next24Hours.getJSONObject(3);
             int hour4PicEnd = hour4.get("hourlySummary").toString().indexOf(".");
@@ -321,6 +330,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp4 = (TextView) findViewById(R.id.myTemp4);
             String myTemp4Str = hour4.get("hourlyTemp").toString();
             myTemp4.setText(myTemp4Str);
+            hour4 = null;
+            myTemp4 = null;
+            myTime4 = null;
+            myImg4 = null;
 
             JSONObject hour5 = next24Hours.getJSONObject(4);
             int hour5PicEnd = hour5.get("hourlySummary").toString().indexOf(".");
@@ -376,6 +389,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp5 = (TextView) findViewById(R.id.myTemp5);
             String myTemp5Str = hour5.get("hourlyTemp").toString();
             myTemp5.setText(myTemp5Str);
+            hour5 = null;
+            myTemp5 = null;
+            myTime5 = null;
+            myImg5 = null;
 
             JSONObject hour6 = next24Hours.getJSONObject(5);
             int hour6PicEnd = hour6.get("hourlySummary").toString().indexOf(".");
@@ -431,6 +448,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp6 = (TextView) findViewById(R.id.myTemp6);
             String myTemp6Str = hour6.get("hourlyTemp").toString();
             myTemp6.setText(myTemp6Str);
+            hour6 = null;
+            myTemp6 = null;
+            myTime6 = null;
+            myImg6 = null;
 
             JSONObject hour7 = next24Hours.getJSONObject(6);
             int hour7PicEnd = hour7.get("hourlySummary").toString().indexOf(".");
@@ -486,6 +507,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp7 = (TextView) findViewById(R.id.myTemp7);
             String myTemp7Str = hour7.get("hourlyTemp").toString();
             myTemp7.setText(myTemp7Str);
+            hour7 = null;
+            myTemp7 = null;
+            myTime7 = null;
+            myImg7 = null;
 
             JSONObject hour8 = next24Hours.getJSONObject(7);
             int hour8PicEnd = hour8.get("hourlySummary").toString().indexOf(".");
@@ -541,6 +566,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp8 = (TextView) findViewById(R.id.myTemp8);
             String myTemp8Str = hour8.get("hourlyTemp").toString();
             myTemp8.setText(myTemp8Str);
+            hour8 = null;
+            myTemp8 = null;
+            myTime8 = null;
+            myImg8 = null;
 
             JSONObject hour9 = next24Hours.getJSONObject(8);
             int hour9PicEnd = hour9.get("hourlySummary").toString().indexOf(".");
@@ -596,6 +625,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp9 = (TextView) findViewById(R.id.myTemp9);
             String myTemp9Str = hour9.get("hourlyTemp").toString();
             myTemp9.setText(myTemp9Str);
+            hour9 = null;
+            myTemp9 = null;
+            myTime9 = null;
+            myImg9 = null;
 
             JSONObject hour10 = next24Hours.getJSONObject(9);
             int hour10PicEnd = hour10.get("hourlySummary").toString().indexOf(".");
@@ -651,6 +684,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp10 = (TextView) findViewById(R.id.myTemp10);
             String myTemp10Str = hour10.get("hourlyTemp").toString();
             myTemp10.setText(myTemp10Str);
+            hour10 = null;
+            myTemp10 = null;
+            myTime10 = null;
+            myImg10 = null;
 
             JSONObject hour11 = next24Hours.getJSONObject(10);
             int hour11PicEnd = hour11.get("hourlySummary").toString().indexOf(".");
@@ -706,6 +743,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp11 = (TextView) findViewById(R.id.myTemp11);
             String myTemp11Str = hour11.get("hourlyTemp").toString();
             myTemp11.setText(myTemp11Str);
+            hour11 = null;
+            myTemp11 = null;
+            myTime11 = null;
+            myImg11 = null;
 
             JSONObject hour12 = next24Hours.getJSONObject(11);
             int hour12PicEnd = hour12.get("hourlySummary").toString().indexOf(".");
@@ -761,6 +802,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp12 = (TextView) findViewById(R.id.myTemp12);
             String myTemp12Str = hour12.get("hourlyTemp").toString();
             myTemp12.setText(myTemp12Str);
+            hour12 = null;
+            myTemp12 = null;
+            myTime12 = null;
+            myImg12 = null;
 
             JSONObject hour13 = next24Hours.getJSONObject(12);
             int hour13PicEnd = hour13.get("hourlySummary").toString().indexOf(".");
@@ -816,6 +861,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp13 = (TextView) findViewById(R.id.myTemp13);
             String myTemp13Str = hour13.get("hourlyTemp").toString();
             myTemp13.setText(myTemp13Str);
+            hour13 = null;
+            myTemp13 = null;
+            myTime13 = null;
+            myImg13 = null;
 
             JSONObject hour14 = next24Hours.getJSONObject(13);
             int hour14PicEnd = hour14.get("hourlySummary").toString().indexOf(".");
@@ -871,6 +920,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp14 = (TextView) findViewById(R.id.myTemp14);
             String myTemp14Str = hour14.get("hourlyTemp").toString();
             myTemp14.setText(myTemp14Str);
+            hour14 = null;
+            myTemp14 = null;
+            myTime14 = null;
+            myImg14 = null;
 
             JSONObject hour15 = next24Hours.getJSONObject(14);
             int hour15PicEnd = hour15.get("hourlySummary").toString().indexOf(".");
@@ -926,6 +979,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp15 = (TextView) findViewById(R.id.myTemp15);
             String myTemp15Str = hour15.get("hourlyTemp").toString();
             myTemp15.setText(myTemp15Str);
+            hour15 = null;
+            myTemp15 = null;
+            myTime15 = null;
+            myImg15 = null;
 
             JSONObject hour16 = next24Hours.getJSONObject(15);
             int hour16PicEnd = hour16.get("hourlySummary").toString().indexOf(".");
@@ -981,6 +1038,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp16 = (TextView) findViewById(R.id.myTemp16);
             String myTemp16Str = hour16.get("hourlyTemp").toString();
             myTemp16.setText(myTemp16Str);
+            hour16 = null;
+            myTemp16 = null;
+            myTime16 = null;
+            myImg16 = null;
 
             JSONObject hour17 = next24Hours.getJSONObject(16);
             int hour17PicEnd = hour17.get("hourlySummary").toString().indexOf(".");
@@ -1036,6 +1097,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp17 = (TextView) findViewById(R.id.myTemp17);
             String myTemp17Str = hour17.get("hourlyTemp").toString();
             myTemp17.setText(myTemp17Str);
+            hour17 = null;
+            myTemp17 = null;
+            myTime17 = null;
+            myImg17 = null;
 
             JSONObject hour18 = next24Hours.getJSONObject(17);
             int hour18PicEnd = hour18.get("hourlySummary").toString().indexOf(".");
@@ -1091,6 +1156,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp18 = (TextView) findViewById(R.id.myTemp18);
             String myTemp18Str = hour18.get("hourlyTemp").toString();
             myTemp18.setText(myTemp18Str);
+            hour18 = null;
+            myTemp18 = null;
+            myTime18 = null;
+            myImg18 = null;
 
             JSONObject hour19 = next24Hours.getJSONObject(18);
             int hour19PicEnd = hour19.get("hourlySummary").toString().indexOf(".");
@@ -1146,6 +1215,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp19 = (TextView) findViewById(R.id.myTemp19);
             String myTemp19Str = hour19.get("hourlyTemp").toString();
             myTemp19.setText(myTemp19Str);
+            hour19 = null;
+            myTemp19 = null;
+            myTime19 = null;
+            myImg19 = null;
 
             JSONObject hour20 = next24Hours.getJSONObject(19);
             int hour20PicEnd = hour20.get("hourlySummary").toString().indexOf(".");
@@ -1176,7 +1249,7 @@ public class DetailsActivity extends AppCompatActivity {
                     myImg20.setImageResource(R.drawable.fog);
                     break;
                 case "rain":
-                    myImg16.setImageResource(R.drawable.rain);
+                    myImg20.setImageResource(R.drawable.rain);
                     break;
                 case "sleet":
                     myImg20.setImageResource(R.drawable.sleet);
@@ -1201,6 +1274,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp20 = (TextView) findViewById(R.id.myTemp20);
             String myTemp20Str = hour20.get("hourlyTemp").toString();
             myTemp20.setText(myTemp20Str);
+            hour20 = null;
+            myTemp20 = null;
+            myTime20 = null;
+            myImg20 = null;
 
             JSONObject hour21 = next24Hours.getJSONObject(20);
             int hour21PicEnd = hour21.get("hourlySummary").toString().indexOf(".");
@@ -1256,6 +1333,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp21 = (TextView) findViewById(R.id.myTemp21);
             String myTemp21Str = hour21.get("hourlyTemp").toString();
             myTemp21.setText(myTemp21Str);
+            hour21 = null;
+            myTemp21 = null;
+            myTime21 = null;
+            myImg21 = null;
 
             JSONObject hour22 = next24Hours.getJSONObject(21);
             int hour22PicEnd = hour22.get("hourlySummary").toString().indexOf(".");
@@ -1311,6 +1392,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp22 = (TextView) findViewById(R.id.myTemp22);
             String myTemp22Str = hour22.get("hourlyTemp").toString();
             myTemp22.setText(myTemp22Str);
+            hour22 = null;
+            myTemp22 = null;
+            myTime22 = null;
+            myImg22 = null;
 
             JSONObject hour23 = next24Hours.getJSONObject(22);
             int hour23PicEnd = hour23.get("hourlySummary").toString().indexOf(".");
@@ -1366,6 +1451,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp23 = (TextView) findViewById(R.id.myTemp23);
             String myTemp23Str = hour23.get("hourlyTemp").toString();
             myTemp23.setText(myTemp23Str);
+            hour23 = null;
+            myTemp23 = null;
+            myTime23 = null;
+            myImg23 = null;
 
             JSONObject hour24 = next24Hours.getJSONObject(23);
             int hour24PicEnd = hour24.get("hourlySummary").toString().indexOf(".");
@@ -1421,6 +1510,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp24 = (TextView) findViewById(R.id.myTemp24);
             String myTemp24Str = hour24.get("hourlyTemp").toString();
             myTemp24.setText(myTemp24Str);
+            hour24 = null;
+            myTemp24 = null;
+            myTime24 = null;
+            myImg24 = null;
 
 
             //rendering the next 24 hours description
@@ -1474,9 +1567,11 @@ public class DetailsActivity extends AppCompatActivity {
 
             TextView myTemp25 = (TextView) findViewById(R.id.myTemp25);
             String myTemp25Str = hour25.get("hourlyTemp").toString();
-
-
             myTemp25.setText(myTemp25Str);
+            hour25 = null;
+            myTemp25 = null;
+            myTime25 = null;
+            myImg25 = null;
 
             JSONObject hour26 = next24Hours.getJSONObject(25);
             int hour26PicEnd = hour26.get("hourlySummary").toString().indexOf(".");
@@ -1513,7 +1608,7 @@ public class DetailsActivity extends AppCompatActivity {
                     myImg26.setImageResource(R.drawable.sleet);
                     break;
                 case "snow":
-                    myImg2.setImageResource(R.drawable.snow);
+                    myImg26.setImageResource(R.drawable.snow);
                     break;
                 case "wind":
                     myImg26.setImageResource(R.drawable.wind);
@@ -1532,6 +1627,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp26 = (TextView) findViewById(R.id.myTemp26);
             String myTemp26Str = hour26.get("hourlyTemp").toString();
             myTemp26.setText(myTemp26Str);
+            hour26 = null;
+            myTemp26 = null;
+            myTime26 = null;
+            myImg26 = null;
 
             JSONObject hour27 = next24Hours.getJSONObject(26);
             int hour27PicEnd = hour27.get("hourlySummary").toString().indexOf(".");
@@ -1585,8 +1684,12 @@ public class DetailsActivity extends AppCompatActivity {
             myTime27.setText(myTime27StrIndex);
 
             TextView myTemp27 = (TextView) findViewById(R.id.myTemp27);
-            String myTemp27Str = hour3.get("hourlyTemp").toString();
+            String myTemp27Str = hour27.get("hourlyTemp").toString();
             myTemp27.setText(myTemp27Str);
+            hour27 = null;
+            myTemp27 = null;
+            myTime27 = null;
+            myImg27 = null;
 
             JSONObject hour28 = next24Hours.getJSONObject(27);
             int hour28PicEnd = hour28.get("hourlySummary").toString().indexOf(".");
@@ -1597,7 +1700,7 @@ public class DetailsActivity extends AppCompatActivity {
             //myTest100.setText(pic1);
 
             ImageView myImg28 = (ImageView) findViewById(R.id.myImg28);
-            switch(pic4) {
+            switch(pic28) {
                 case "clear":
                     myImg28.setImageResource(R.drawable.clear);
                     break;
@@ -1640,8 +1743,12 @@ public class DetailsActivity extends AppCompatActivity {
             myTime28.setText(myTime28StrIndex);
 
             TextView myTemp28 = (TextView) findViewById(R.id.myTemp28);
-            String myTemp28Str = hour4.get("hourlyTemp").toString();
+            String myTemp28Str = hour28.get("hourlyTemp").toString();
             myTemp28.setText(myTemp28Str);
+            hour28 = null;
+            myTemp28 = null;
+            myTime28= null;
+            myImg28 = null;
 
             JSONObject hour29 = next24Hours.getJSONObject(28);
             int hour29PicEnd = hour29.get("hourlySummary").toString().indexOf(".");
@@ -1697,6 +1804,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp29 = (TextView) findViewById(R.id.myTemp29);
             String myTemp29Str = hour29.get("hourlyTemp").toString();
             myTemp29.setText(myTemp29Str);
+            hour29 = null;
+            myTemp29 = null;
+            myTime29 = null;
+            myImg29 = null;
 
             JSONObject hour30 = next24Hours.getJSONObject(29);
             int hour30PicEnd = hour30.get("hourlySummary").toString().indexOf(".");
@@ -1752,6 +1863,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp30 = (TextView) findViewById(R.id.myTemp30);
             String myTemp30Str = hour30.get("hourlyTemp").toString();
             myTemp30.setText(myTemp30Str);
+            hour30 = null;
+            myTemp30 = null;
+            myTime30 = null;
+            myImg30 = null;
 
             JSONObject hour31 = next24Hours.getJSONObject(30);
             int hour31PicEnd = hour31.get("hourlySummary").toString().indexOf(".");
@@ -1807,6 +1922,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp31 = (TextView) findViewById(R.id.myTemp31);
             String myTemp31Str = hour31.get("hourlyTemp").toString();
             myTemp31.setText(myTemp31Str);
+            hour31 = null;
+            myTemp31 = null;
+            myTime31 = null;
+            myImg31 = null;
 
             JSONObject hour32 = next24Hours.getJSONObject(31);
             int hour32PicEnd = hour32.get("hourlySummary").toString().indexOf(".");
@@ -1825,7 +1944,7 @@ public class DetailsActivity extends AppCompatActivity {
                     myImg32.setImageResource(R.drawable.clear_night);
                     break;
                 case "cloud_day":
-                    myImg8.setImageResource(R.drawable.cloud_day);
+                    myImg32.setImageResource(R.drawable.cloud_day);
                     break;
                 case "cloud_night":
                     myImg32.setImageResource(R.drawable.cloud_night);
@@ -1862,6 +1981,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp32 = (TextView) findViewById(R.id.myTemp32);
             String myTemp32Str = hour32.get("hourlyTemp").toString();
             myTemp32.setText(myTemp32Str);
+            hour32 = null;
+            myTemp32 = null;
+            myTime32 = null;
+            myImg32 = null;
 
             JSONObject hour33 = next24Hours.getJSONObject(32);
             int hour33PicEnd = hour33.get("hourlySummary").toString().indexOf(".");
@@ -1917,6 +2040,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp33 = (TextView) findViewById(R.id.myTemp33);
             String myTemp33Str = hour33.get("hourlyTemp").toString();
             myTemp33.setText(myTemp33Str);
+            hour33 = null;
+            myTemp33 = null;
+            myTime33 = null;
+            myImg33 = null;
 
             JSONObject hour34 = next24Hours.getJSONObject(33);
             int hour34PicEnd = hour34.get("hourlySummary").toString().indexOf(".");
@@ -1972,6 +2099,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp34 = (TextView) findViewById(R.id.myTemp34);
             String myTemp34Str = hour34.get("hourlyTemp").toString();
             myTemp34.setText(myTemp34Str);
+            hour34 = null;
+            myTemp34 = null;
+            myTime34 = null;
+            myImg34 = null;
 
             JSONObject hour35 = next24Hours.getJSONObject(34);
             int hour35PicEnd = hour35.get("hourlySummary").toString().indexOf(".");
@@ -2025,8 +2156,12 @@ public class DetailsActivity extends AppCompatActivity {
             myTime35.setText(myTime35StrIndex);
 
             TextView myTemp35 = (TextView) findViewById(R.id.myTemp35);
-            String myTeme35Str = hour35.get("hourlyTemp").toString();
-            myTemp35.setText(myTeme35Str);
+            String myTemp35Str = hour35.get("hourlyTemp").toString();
+            myTemp35.setText(myTemp35Str);
+            hour35 = null;
+            myTemp35 = null;
+            myTime35 = null;
+            myImg35 = null;
 
             JSONObject hour36 = next24Hours.getJSONObject(35);
             int hour36PicEnd = hour36.get("hourlySummary").toString().indexOf(".");
@@ -2082,6 +2217,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp36 = (TextView) findViewById(R.id.myTemp36);
             String myTemp36Str = hour36.get("hourlyTemp").toString();
             myTemp36.setText(myTemp36Str);
+            hour36 = null;
+            myTemp36 = null;
+            myTime36 = null;
+            myImg36 = null;
 
             JSONObject hour37 = next24Hours.getJSONObject(36);
             int hour37PicEnd = hour37.get("hourlySummary").toString().indexOf(".");
@@ -2137,6 +2276,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp37 = (TextView) findViewById(R.id.myTemp37);
             String myTemp37Str = hour37.get("hourlyTemp").toString();
             myTemp37.setText(myTemp37Str);
+            hour37 = null;
+            myTemp37 = null;
+            myTime37 = null;
+            myImg37 = null;
 
             JSONObject hour38 = next24Hours.getJSONObject(37);
             int hour38PicEnd = hour38.get("hourlySummary").toString().indexOf(".");
@@ -2192,6 +2335,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp38 = (TextView) findViewById(R.id.myTemp38);
             String myTemp38Str = hour38.get("hourlyTemp").toString();
             myTemp38.setText(myTemp38Str);
+            hour38 = null;
+            myTemp38 = null;
+            myTime38 = null;
+            myImg38 = null;
 
             JSONObject hour39 = next24Hours.getJSONObject(38);
             int hour39PicEnd = hour39.get("hourlySummary").toString().indexOf(".");
@@ -2247,6 +2394,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp39 = (TextView) findViewById(R.id.myTemp39);
             String myTemp39Str = hour39.get("hourlyTemp").toString();
             myTemp39.setText(myTemp39Str);
+            hour39 = null;
+            myTemp39 = null;
+            myTime39 = null;
+            myImg39 = null;
 
             JSONObject hour40 = next24Hours.getJSONObject(39);
             int hour40PicEnd = hour40.get("hourlySummary").toString().indexOf(".");
@@ -2302,6 +2453,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp40 = (TextView) findViewById(R.id.myTemp40);
             String myTemp40Str = hour40.get("hourlyTemp").toString();
             myTemp40.setText(myTemp40Str);
+            hour40 = null;
+            myTemp40 = null;
+            myTime40 = null;
+            myImg40 = null;
 
             JSONObject hour41 = next24Hours.getJSONObject(40);
             int hour41PicEnd = hour41.get("hourlySummary").toString().indexOf(".");
@@ -2357,11 +2512,15 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp41 = (TextView) findViewById(R.id.myTemp41);
             String myTemp41Str = hour41.get("hourlyTemp").toString();
             myTemp41.setText(myTemp41Str);
+            hour41 = null;
+            myTemp41 = null;
+            myTime41 = null;
+            myImg41 = null;
 
             JSONObject hour42 = next24Hours.getJSONObject(41);
             int hour42PicEnd = hour42.get("hourlySummary").toString().indexOf(".");
             int hour42PicBegin = hour42.get("hourlySummary").toString().indexOf("/");
-            String pic42 = hour18.get("hourlySummary").toString().substring(hour42PicBegin+1, hour42PicEnd);
+            String pic42 = hour42.get("hourlySummary").toString().substring(hour42PicBegin+1, hour42PicEnd);
 
             //TextView myTest100 = (TextView) findViewById(R.id.mytest);
             //myTest100.setText(pic1);
@@ -2412,6 +2571,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp42 = (TextView) findViewById(R.id.myTemp42);
             String myTemp42Str = hour42.get("hourlyTemp").toString();
             myTemp42.setText(myTemp42Str);
+            hour42 = null;
+            myTemp42 = null;
+            myTime42 = null;
+            myImg42 = null;
 
             JSONObject hour43 = next24Hours.getJSONObject(42);
             int hour43PicEnd = hour43.get("hourlySummary").toString().indexOf(".");
@@ -2467,10 +2630,14 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp43 = (TextView) findViewById(R.id.myTemp43);
             String myTemp43Str = hour43.get("hourlyTemp").toString();
             myTemp43.setText(myTemp43Str);
+            hour43 = null;
+            myTemp43 = null;
+            myTime43 = null;
+            myImg43 = null;
 
             JSONObject hour44 = next24Hours.getJSONObject(43);
-            int hour44PicEnd = hour20.get("hourlySummary").toString().indexOf(".");
-            int hour44PicBegin = hour20.get("hourlySummary").toString().indexOf("/");
+            int hour44PicEnd = hour44.get("hourlySummary").toString().indexOf(".");
+            int hour44PicBegin = hour44.get("hourlySummary").toString().indexOf("/");
             String pic44 = hour44.get("hourlySummary").toString().substring(hour44PicBegin+1, hour44PicEnd);
 
             //TextView myTest100 = (TextView) findViewById(R.id.mytest);
@@ -2522,6 +2689,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp44 = (TextView) findViewById(R.id.myTemp44);
             String myTemp44Str = hour44.get("hourlyTemp").toString();
             myTemp44.setText(myTemp44Str);
+            hour44 = null;
+            myTemp44 = null;
+            myTime44 = null;
+            myImg44 = null;
 
             JSONObject hour45 = next24Hours.getJSONObject(44);
             int hour45PicEnd = hour45.get("hourlySummary").toString().indexOf(".");
@@ -2577,6 +2748,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp45 = (TextView) findViewById(R.id.myTemp45);
             String myTemp45Str = hour45.get("hourlyTemp").toString();
             myTemp45.setText(myTemp45Str);
+            hour45 = null;
+            myTemp45 = null;
+            myTime45 = null;
+            myImg45 = null;
 
             JSONObject hour46 = next24Hours.getJSONObject(45);
             int hour46PicEnd = hour46.get("hourlySummary").toString().indexOf(".");
@@ -2632,6 +2807,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp46 = (TextView) findViewById(R.id.myTemp46);
             String myTemp46Str = hour46.get("hourlyTemp").toString();
             myTemp46.setText(myTemp46Str);
+            hour46 = null;
+            myTemp46 = null;
+            myTime46 = null;
+            myImg46 = null;
 
             JSONObject hour47 = next24Hours.getJSONObject(46);
             int hour47PicEnd = hour47.get("hourlySummary").toString().indexOf(".");
@@ -2687,6 +2866,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp47 = (TextView) findViewById(R.id.myTemp47);
             String myTemp47Str = hour47.get("hourlyTemp").toString();
             myTemp47.setText(myTemp47Str);
+            hour47 = null;
+            myTemp47 = null;
+            myTime47 = null;
+            myImg47 = null;
 
             JSONObject hour48 = next24Hours.getJSONObject(47);
             int hour48PicEnd = hour48.get("hourlySummary").toString().indexOf(".");
@@ -2742,6 +2925,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myTemp48 = (TextView) findViewById(R.id.myTemp48);
             String myTemp48Str = hour48.get("hourlyTemp").toString();
             myTemp48.setText(myTemp48Str);
+            hour48 = null;
+            myTemp48 = null;
+            myTime48 = null;
+            myImg48 = null;
 
 
 
@@ -2812,6 +2999,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay1Temp = (TextView) findViewById(R.id.day1Temp);
             String myDay1TempStr = "Min: " + day1.get("minTemp").toString() + TempUnit + " | " + "Max: " + day1.getString("maxTemp").toString() + TempUnit;
             myDay1Temp.setText(myDay1TempStr);
+            day1 = null;
+            myDay1Img = null;
+            myDay1Des = null;
+            myDay1Temp = null;
 
 
             JSONObject day2 = next7Days.getJSONObject(1);
@@ -2864,6 +3055,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay2Temp = (TextView) findViewById(R.id.day2Temp);
             String myDay2TempStr = "Min: " + day2.get("minTemp").toString() + TempUnit + " | " + "Max: " + day2.getString("maxTemp").toString() + TempUnit;
             myDay2Temp.setText(myDay2TempStr);
+            day2 = null;
+            myDay2Img = null;
+            myDay2Des = null;
+            myDay2Temp = null;
 
             JSONObject day3 = next7Days.getJSONObject(2);
             //set the description picture
@@ -2915,6 +3110,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay3Temp = (TextView) findViewById(R.id.day3Temp);
             String myDay3TempStr = "Min: " + day3.get("minTemp").toString() + TempUnit + " | " + "Max: " + day3.getString("maxTemp").toString() + TempUnit;
             myDay3Temp.setText(myDay3TempStr);
+            day3 = null;
+            myDay3Img = null;
+            myDay3Des = null;
+            myDay3Temp = null;
 
             JSONObject day4 = next7Days.getJSONObject(3);
             //set the description picture
@@ -2966,6 +3165,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay4Temp = (TextView) findViewById(R.id.day4Temp);
             String myDay4TempStr = "Min: " + day4.get("minTemp").toString() + TempUnit + " | " + "Max: " + day4.getString("maxTemp").toString() + TempUnit;
             myDay4Temp.setText(myDay4TempStr);
+            day4 = null;
+            myDay4Img = null;
+            myDay4Des = null;
+            myDay4Temp = null;
 
             JSONObject day5 = next7Days.getJSONObject(4);
             //set the description picture
@@ -3017,6 +3220,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay5Temp = (TextView) findViewById(R.id.day5Temp);
             String myDay5TempStr = "Min: " + day5.get("minTemp").toString() + TempUnit + " | " + "Max: " + day5.getString("maxTemp").toString() + TempUnit;
             myDay5Temp.setText(myDay5TempStr);
+            day5 = null;
+            myDay5Img = null;
+            myDay5Des = null;
+            myDay5Temp = null;
 
             JSONObject day6 = next7Days.getJSONObject(5);
             //set the description picture
@@ -3068,6 +3275,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay6Temp = (TextView) findViewById(R.id.day6Temp);
             String myDay6TempStr = "Min: " + day6.get("minTemp").toString() + TempUnit + " | " + "Max: " + day6.getString("maxTemp").toString() + TempUnit;
             myDay6Temp.setText(myDay6TempStr);
+            day6 = null;
+            myDay6Img = null;
+            myDay6Des = null;
+            myDay6Temp = null;
 
             JSONObject day7 = next7Days.getJSONObject(6);
             //set the description picture
@@ -3119,6 +3330,10 @@ public class DetailsActivity extends AppCompatActivity {
             TextView myDay7Temp = (TextView) findViewById(R.id.day7Temp);
             String myDay7TempStr = "Min: " + day7.get("minTemp").toString() + TempUnit + " | " + "Max: " + day7.getString("maxTemp").toString() + TempUnit;
             myDay7Temp.setText(myDay7TempStr);
+            day7 = null;
+            myDay7Img = null;
+            myDay7Des = null;
+            myDay7Temp = null;
 
 
         } catch (JSONException e) {

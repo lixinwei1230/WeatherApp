@@ -172,6 +172,21 @@ public class ResultActivity extends AppCompatActivity {
             TextView mySunset = (TextView) findViewById(R.id.sunsetRightNow);
             mySunset.setText(rightNow.get("sunset").toString());
 
+            rightNow = null;
+            myDes = null;
+            myTemp = null;
+            myPrefix = null;
+            myLowTemp = null;
+            myHighTemp = null;
+            myPrecipitation = null;
+            myChanceOfRain = null;
+            myWindSpeed = null;
+            myDewPoint = null;
+            myHumidity = null;
+            myVisibility = null;
+            mySunrise = null;
+            mySunset = null;
+
             //testText.setText(pic);
         } catch (JSONException e) {
             Log.e("Json exception: ", e.getMessage(), e);
