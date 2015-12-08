@@ -1698,7 +1698,7 @@ public class DetailsActivity extends AppCompatActivity {
             String myTemp29Str = hour29.get("hourlyTemp").toString();
             myTemp29.setText(myTemp29Str);
 
-            JSONObject hour30 = next24Hours.getJSONObject(39);
+            JSONObject hour30 = next24Hours.getJSONObject(29);
             int hour30PicEnd = hour30.get("hourlySummary").toString().indexOf(".");
             int hour30PicBegin = hour30.get("hourlySummary").toString().indexOf("/");
             String pic30 = hour30.get("hourlySummary").toString().substring(hour30PicBegin+1, hour30PicEnd);

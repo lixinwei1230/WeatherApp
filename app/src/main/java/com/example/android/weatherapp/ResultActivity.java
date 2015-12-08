@@ -32,6 +32,8 @@ public class ResultActivity extends AppCompatActivity {
     private String myState;
     private String myImgUrl;
     private String myDes;
+    private String lon;
+    private String lat;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -52,9 +54,7 @@ public class ResultActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
         // this part is optional
-        /*shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
 
-        });*/
 
 
         // receive the arguments from the previous Activity
@@ -64,6 +64,15 @@ public class ResultActivity extends AppCompatActivity {
         }
         // assign the values to string-arguments
         String myJson = extra.getString("myJson");
+        try {
+            JSONObject obj = new JSONObject(myJson);
+            lon = obj.getString("longitude");
+            lat = obj.getString("latitude");
+        } catch (JSONException e) {
+            Log.e("Json exception: ", e.getMessage(), e);
+            e.printStackTrace();
+        }
+
         myCity = extra.getString("city");
         myState = extra.getString("state");
         getRightnowInfoFromJson(myJson);
@@ -180,38 +189,41 @@ public class ResultActivity extends AppCompatActivity {
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.facebook.com"));
                 startActivity(intent);*/
-                Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
-                String myTitle = "Current Weather in " + myCity + ", " + myState;
-                ShareLinkContent content = new ShareLinkContent.Builder()
-                        .setContentUrl(Uri.parse("http://forecast.io/"))
-                        .setContentTitle(myTitle)
-                        .setImageUrl(Uri.parse(myImgUrl))
-                        .setContentDescription(myDes)
-                        .build();
-                shareDialog.show(content);
+                //Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
+                if (ShareDialog.canShow(ShareLinkContent.class)) {
+                    String myTitle = "Current Weather in " + myCity + ", " + myState;
+                    ShareLinkContent content = new ShareLinkContent.Builder()
+                            .setContentUrl(Uri.parse("http://forecast.io/"))
+                            .setContentTitle(myTitle)
+                            .setImageUrl(Uri.parse(myImgUrl))
+                            .setContentDescription(myDes)
+                            .build();
+                    shareDialog.show(content);
+                }
 
                 shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
-
-
                     @Override
                     public void onSuccess(Sharer.Result result) {
-                        if (result.getPostId() == null) {
-                            Toast.makeText(getApplicationContext(), "Posted Cancelled", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Facebook Post Successful", Toast.LENGTH_SHORT).show();
-                        }
+                        Toast.makeText(getApplicationContext(), "Facebook Post Successful", Toast.LENGTH_LONG).show();
                     }
                     @Override
                     public void onCancel() {
-                        Toast.makeText(getApplicationContext(), "Posted Cancelled", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Posted Cancelled", Toast.LENGTH_LONG).show();
                     }
-
                     @Override
                     public void onError(FacebookException e) {
                         Log.v("FACEBOOK_TEST", "share api error " + e);
                     }
-
                 });
+
+
+
+                //shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
+
+
+
+
+               // });
             }
         });
 
@@ -230,6 +242,23 @@ public class ResultActivity extends AppCompatActivity {
             }
 
         });
+
+        Button myMapBtn = (Button) findViewById(R.id.map);
+        myMapBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent myIntent1 = new Intent(ResultActivity.this, MapActivity.class);
+                myIntent1.putExtra("city", extra.getString("city"));
+                myIntent1.putExtra("state", extra.getString("state"));
+                myIntent1.putExtra("lon", lon);
+                myIntent1.putExtra("lat", lat);
+                startActivity(myIntent1);
+            }
+
+        });
+
+
     }
 
 

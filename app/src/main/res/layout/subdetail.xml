@@ -709,6 +709,7 @@
         </TableLayout>
 
         <include layout="@layout/subdetail2"/>
+
     </RelativeLayout>
 
 </merge>

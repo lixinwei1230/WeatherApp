@@ -2,10 +2,14 @@
 <resources>
     <string name="app_name">WeatherApp</string>
 
-    <string name="statePrompt">Select</string>
+
+
+    <string name="aeris_client_id">ss3djAnQBhxb7Vq4CNuDh</string>
+    <string name="aeris_client_secret">ZzZDhVOygVQgMJiaPprcwBaRNIGO4o3n10lubUdq</string>
 
     <string name="app_id">555492611282408</string>
 
+    <string name="statePrompt">Select</string>
     <string-array name="stateArrays">
         <item>Select</item>
         <item>AL</item>
