@@ -12,20 +12,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime13"/>
+            android:id="@+id/myTime37"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg13"/>
+            android:id="@+id/myImg37"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp13"/>
+            android:id="@+id/myTemp37"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -38,20 +38,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime14"/>
+            android:id="@+id/myTime38"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg14"/>
+            android:id="@+id/myImg38"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp14"/>
+            android:id="@+id/myTemp38"/>
     </TableRow>
 
     <TableRow
@@ -66,20 +66,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime15"/>
+            android:id="@+id/myTime39"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg15"/>
+            android:id="@+id/myImg39"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp15"/>
+            android:id="@+id/myTemp39"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -92,20 +92,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime16"/>
+            android:id="@+id/myTime40"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg16"/>
+            android:id="@+id/myImg40"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp16"/>
+            android:id="@+id/myTemp40"/>
     </TableRow>
 
     <TableRow
@@ -120,20 +120,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime17"/>
+            android:id="@+id/myTime41"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg17"/>
+            android:id="@+id/myImg41"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp17"/>
+            android:id="@+id/myTemp41"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -146,20 +146,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime18"/>
+            android:id="@+id/myTime42"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg18"/>
+            android:id="@+id/myImg42"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp18"/>
+            android:id="@+id/myTemp42"/>
     </TableRow>
 
     <TableRow
@@ -174,20 +174,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime19"/>
+            android:id="@+id/myTime43"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg19"/>
+            android:id="@+id/myImg43"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp19"/>
+            android:id="@+id/myTemp43"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -200,20 +200,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime20"/>
+            android:id="@+id/myTime44"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg20"/>
+            android:id="@+id/myImg44"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp20"/>
+            android:id="@+id/myTemp44"/>
     </TableRow>
 
     <TableRow
@@ -228,20 +228,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime21"/>
+            android:id="@+id/myTime45"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg21"/>
+            android:id="@+id/myImg45"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp21"/>
+            android:id="@+id/myTemp45"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -254,20 +254,20 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime22"/>
+            android:id="@+id/myTime46"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg22"/>
+            android:id="@+id/myImg46"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp22"/>
+            android:id="@+id/myTemp46"/>
     </TableRow>
 
     <TableRow
@@ -282,45 +282,45 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime23"/>
+            android:id="@+id/myTime47"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg23"/>
+            android:id="@+id/myImg47"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp23"/>
+            android:id="@+id/myTemp47"/>
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:layout_marginBottom="6dp">
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTime24"/>
+            android:id="@+id/myTime48"/>
         <ImageView
             android:layout_weight="1"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:gravity="center_horizontal"
-            android:id="@+id/myImg24"/>
+            android:id="@+id/myImg48"/>
         <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="22sp"
-            android:id="@+id/myTemp24"/>
+            android:id="@+id/myTemp48"/>
     </TableRow>
-
 </merge>

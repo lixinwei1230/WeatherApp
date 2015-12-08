@@ -187,6 +187,8 @@ public class ResultActivity extends AppCompatActivity {
             mySunrise = null;
             mySunset = null;
 
+            System.gc();
+
             //testText.setText(pic);
         } catch (JSONException e) {
             Log.e("Json exception: ", e.getMessage(), e);

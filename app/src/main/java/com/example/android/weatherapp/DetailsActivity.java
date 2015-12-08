@@ -2930,6 +2930,8 @@ public class DetailsActivity extends AppCompatActivity {
             myTime48 = null;
             myImg48 = null;
 
+            System.gc();
+
 
 
         } catch (JSONException e) {
@@ -3334,6 +3336,8 @@ public class DetailsActivity extends AppCompatActivity {
             myDay7Img = null;
             myDay7Des = null;
             myDay7Temp = null;
+
+            System.gc();
 
 
         } catch (JSONException e) {

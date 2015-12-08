@@ -60,5 +60,45 @@ public class MapActivity extends AppCompatActivity {
         task.requestClosest(place);
 
 
+        //create the batch builder object
+        /*BatchBuilder builder = new BatchBuilder();
+
+        //set the place
+        builder.addGlobalParameter(place);
+
+        //add an endpoint to the batch request
+        builder.addEndpoint(new Endpoint(EndpointType.OBSERVATIONS, Action.CLOSEST)
+                .addParameters(FieldsParameter.initWith("ob")));
+
+        //add another endpoint to the batch request
+        builder.addEndpoint(new Endpoint(EndpointType.PLACES, Action.CLOSEST)
+                .addParameters(FieldsParameter.initWith("place")));
+
+        //add another endpoint to the batch request
+        builder.addEndpoint(new Endpoint(EndpointType.FORECASTS, Action.CLOSEST)
+                .addParameters(new FilterParameter("daynight"),
+                        new PLimitParameter(2)));
+
+        //add another endpoint to the batch request
+        builder.addEndpoint(new Endpoint(EndpointType.FORECASTS, Action.CLOSEST)
+                .addParameters(new FilterParameter("3hr"), new PLimitParameter(
+                        8), FieldsParameter.initWith(ForecastsFields.TEMP_F,
+                        ForecastsFields.TEMP_C, ForecastsFields.ICON,
+                        ForecastsFields.DATETIME_ISO, Fields.INTERVAL)));
+
+        //compile the batch request(s)
+        AerisRequest request = builder.build();
+
+        BatchCommunicationTask batchTask = new BatchCommunicationTask(this,
+                new BatchCallback() {
+                    @Override
+                    public void onBatchResponse(AerisBatchResponse aerisBatchResponse) {
+                        //do something with the data
+                    }
+                }, request);
+
+        batchTask.execute();*/
+
+
     }
 }
