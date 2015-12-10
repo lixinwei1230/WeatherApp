@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
@@ -44,21 +45,27 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void AddListenOnBotton() {
-        Button myHourlyBtn = (Button) findViewById(R.id.next24HoursBtn);
+        final ImageButton myHourlyBtn = (ImageButton) findViewById(R.id.next24HoursBtn);
+        final ImageButton myDailyBtn = (ImageButton) findViewById(R.id.next7DaysBtn);
+
         myHourlyBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+
                 RelativeLayout myDailyLayout = (RelativeLayout) findViewById(R.id.next7Days);
                 myDailyLayout.setVisibility(View.GONE);
 
                 RelativeLayout myHourlyLayout = (RelativeLayout) findViewById(R.id.next24Hours);
                 myHourlyLayout.setVisibility(View.VISIBLE);
+
+                myHourlyBtn.setImageResource(R.drawable.next24hourclick);
+                myDailyBtn.setImageResource(R.drawable.next7day);
             }
 
         });
 
-        Button myDailyBtn = (Button) findViewById(R.id.next7DaysBtn);
+
         myDailyBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -68,6 +75,9 @@ public class DetailsActivity extends AppCompatActivity {
 
                 RelativeLayout myHourlyLayout = (RelativeLayout) findViewById(R.id.next24Hours);
                 myHourlyLayout.setVisibility(View.GONE);
+
+                myHourlyBtn.setImageResource(R.drawable.next24hour);
+                myDailyBtn.setImageResource(R.drawable.next7dayclick);
             }
 
         });

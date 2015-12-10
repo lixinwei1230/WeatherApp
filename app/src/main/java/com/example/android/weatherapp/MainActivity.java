@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent2 = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(myIntent2);
+                //finish();
             }
         });
 
@@ -275,6 +276,7 @@ public class MainActivity extends AppCompatActivity {
                 myIntent.putExtra("state", String.valueOf(myState.getSelectedItem()));
                 myIntent.putExtra("tempUnit", tempUnit);
                 startActivity(myIntent);
+                //finish();
             }
         }
 

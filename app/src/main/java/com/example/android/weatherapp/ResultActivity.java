@@ -34,6 +34,7 @@ public class ResultActivity extends AppCompatActivity {
     private String myDes;
     private String lon;
     private String lat;
+    private String myJson;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -44,6 +45,15 @@ public class ResultActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
+    /*@Override
+    public void onBackPressed() {
+        // your code.
+        Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_LONG).show();
+        Intent myIntent = new Intent(this.getApplicationContext(), MainActivity.class);
+        startActivity(myIntent);
+        finish();
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +73,7 @@ public class ResultActivity extends AppCompatActivity {
             return;
         }
         // assign the values to string-arguments
-        String myJson = extra.getString("myJson");
+        myJson = extra.getString("myJson");
         try {
             JSONObject obj = new JSONObject(myJson);
             lon = obj.getString("longitude");
@@ -99,33 +109,43 @@ public class ResultActivity extends AppCompatActivity {
                     break;
                 case "clear_night":
                     myImg.setImageResource(R.drawable.clear_night);
+                    myImgUrl += pic + ".png";
                     break;
                 case "cloud_day":
                     myImg.setImageResource(R.drawable.cloud_day);
+                    myImgUrl += pic + ".png";
                     break;
                 case "cloud_night":
                     myImg.setImageResource(R.drawable.cloud_night);
+                    myImgUrl += pic + ".png";
                     break;
                 case "cloudy":
                     myImg.setImageResource(R.drawable.cloudy);
+                    myImgUrl += pic + ".png";
                     break;
                 case "fog":
                     myImg.setImageResource(R.drawable.fog);
+                    myImgUrl += pic + ".png";
                     break;
                 case "rain":
                     myImg.setImageResource(R.drawable.rain);
+                    myImgUrl += pic + ".png";
                     break;
                 case "sleet":
                     myImg.setImageResource(R.drawable.sleet);
+                    myImgUrl += pic + ".png";
                     break;
                 case "snow":
                     myImg.setImageResource(R.drawable.snow);
+                    myImgUrl += pic + ".png";
                     break;
                 case "wind":
                     myImg.setImageResource(R.drawable.wind);
+                    myImgUrl += pic + ".png";
                     break;
                 default:
                     myImg.setImageResource(R.drawable.clear);
+                    myImgUrl += pic + ".png";
                     break;
 
             }
@@ -206,7 +226,7 @@ public class ResultActivity extends AppCompatActivity {
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse("http://www.facebook.com"));
                 startActivity(intent);*/
-                //Toast.makeText(getApplicationContext(), "Test", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), myImgUrl, Toast.LENGTH_SHORT).show();
                 if (ShareDialog.canShow(ShareLinkContent.class)) {
                     String myTitle = "Current Weather in " + myCity + ", " + myState;
                     ShareLinkContent content = new ShareLinkContent.Builder()
