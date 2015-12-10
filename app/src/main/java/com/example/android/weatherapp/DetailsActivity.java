@@ -48,6 +48,7 @@ public class DetailsActivity extends AppCompatActivity {
         final ImageButton myHourlyBtn = (ImageButton) findViewById(R.id.next24HoursBtn);
         final ImageButton myDailyBtn = (ImageButton) findViewById(R.id.next7DaysBtn);
 
+        //handles the next24hourBtn event
         myHourlyBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,7 +66,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         });
 
-
+        //handles the next7dayBtn event
         myDailyBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -82,6 +83,8 @@ public class DetailsActivity extends AppCompatActivity {
 
         });
 
+
+        //the add button that shows the next 24 hours info
         Button my48HourBtn = (Button) findViewById(R.id.show48Hours);
         my48HourBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -101,6 +104,10 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
+
+    //The most stupit way to bond the json info with TextView component.
+    //I just define 48 var, and assign the json info to the compoment
+    //So there are 48 blocks of code looks almost the same
     private void generateNext24HoursWeather(String myJson) {
         TextView myUnit = (TextView) findViewById(R.id.hourlyUnit);
         TextView myUnit1 = (TextView) findViewById(R.id.hourlyUnit1);
@@ -2953,6 +2960,9 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
+
+    //The same way as the generateNext24Hours method.
+    //A bunch of stupid code
     private void generateNext7DaysWeather(String myJson) {
         try {
             JSONObject obj = new JSONObject(myJson);
@@ -3355,6 +3365,7 @@ public class DetailsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
     private void generateHeadLine(String city, String state) {
         TextView myHeadLine = (TextView) findViewById(R.id.showInfo);
