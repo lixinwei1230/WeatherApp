@@ -90,6 +90,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
 
+
     private void getRightnowInfoFromJson(String forecastJsonStr) {
         try {
             myImgUrl = "http://cs-server.usc.edu:45678/hw/hw8/images/";
